@@ -1,0 +1,34 @@
+<mat-toolbar color="primary">
+  <span class="navtextcolor">Tienda</span>
+  <span class="example-spacer"></span>
+  <button mat-raised-button (click)="openShoppingCar()">
+    <mat-icon>shopping_cart</mat-icon>
+    Carrito {{shoppingCarData.length}}
+  </button>
+</mat-toolbar>
+
+<div class="tabla-cont">
+  <table id="tableProducts">
+    <thead>
+      <tr>
+        <th>Producto</th>
+        <th>Marca</th>
+        <th>Precio</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of data">
+        <td>{{ item.productoNombre }}</td>
+        <td>{{ item.marca }}</td>
+        <td>{{ item.precio }}</td>
+        <td class="actions">
+          <button mat-mini-fab (click)="addNewItem(item)">
+            <mat-icon>add</mat-icon>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
