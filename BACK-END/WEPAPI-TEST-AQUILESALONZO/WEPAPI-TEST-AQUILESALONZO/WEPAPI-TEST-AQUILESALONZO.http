@@ -1,0 +1,6 @@
+@WEPAPI_TEST_AQUILESALONZO_HostAddress = http://localhost:5286
+
+GET {{WEPAPI_TEST_AQUILESALONZO_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
